@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu trang Web</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style2.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./font/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./font/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- header -->
+     <header>
+        <div class="header-box">
+            <IMG src="./picture/LOGO3.png">
+            <!-- navigation bar -->
+            <ul class="nav-bar__list">
+                <li class="nav-bar__item">
+                    <a class="nav-bar__item-link" href="./index.html">TRANG CHỦ</a>
+                </li>
+                <li class="nav-bar__item">
+                    <a class="nav-bar__item-link" href="./SanPham.html">SẢN PHẨM</a>
+                    <div class="nav-bar__dropdown-icon">
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                    <!-- sub-nav của sản phẩm -->
+                    <ul class="sub-nav__list">
+                        <li class="sub-nav__item">
+                            <a href="./iPhone.html">iPhone</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="./samSung.html">SamSung</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="./xiaomi.html">Xiaomi</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="./oppo.html">Oppo</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-bar__item">
+                    <a class="nav-bar__item-link" href="./gioithieu.html">GIỚI THIỆU</a>
+                </li>
+                <li class="nav-bar__item">
+                    <a class="nav-bar__item-link" href="./payment.html">THANH TOÁN</a>
+                </li>
+                <li class="nav-bar__item">
+                    <a class="nav-bar__item-link" href="./sitemap.html">SITEMAP</a>
+                </li>                
+            </li>
+            </ul>
+
+            <!-- phần bên phải bao gồm đăng nhập, đăng kí và search box -->
+            <div class="header-right">
+
+                <ul class="login-box">
+                    <li class="login">Đăng nhập</li>
+                    <li class="signup">Đăng ký</li>
+
+                    <!-- form đăng ký -->
+                    <div class="signup-form-wrap">
+                        <div class="form">
+                            <div class="form__header">
+                                <div class="form__header-title">
+                                    <h1>Đăng ký</h1>
+                                </div>
+                                <div class="close">
+                                    <ion-icon name="close-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="form__main">
+                                <div class="user">
+                                    <div class="user-label">Tên tài khoản</div>
+                                    <input type="text" class="user-input" id="user-input" placeholder="Tên tài khoản chứa ít nhất 3 ký tự" onblur="checkUser()">
+                                    <span class="user-error" id="user-error"></span>
+                                </div>
+
+                                <div class="pwd">
+                                    <div class="pwd-label">Mật khẩu</div>
+                                    <input type="password" class="pwd-input" id="pwd-input" placeholder="Mật khẩu chứa ít nhất 6 ký tự" onblur="checkPwd()">
+                                    <span class="pwd-error" id="pwd-error"></span>
+                                </div>
+                
+                                <div class="repwd">
+                                    <div class="repwd-label">Nhập lại mật khẩu</div>
+                                    <input type="password" class="repwd-input" id="repwd-input" minlength="6" placeholder="Nhập lại mật khẩu" onblur="checkRepwd()">
+                                    <span class="repwd-error" id="repwd-error"></span>
+                                </div>
+                           </div>
+                
+                            <div class="form__footer">
+                                <div class="switch-login-form">Đã có tài khoản?</div>
+                                <div class="footer__btn">
+                                    <button class="btn-cancel">Hủy</button>
+                                    <button class="btn-ok">Đăng ký</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- form đăng nhập -->
+                    <div class="login-form-wrap">
+                        <div class="form">
+                            <div class="form__header">
+                                <div class="form__header-title">
+                                    <h1>Đăng nhập</h1>
+                                </div>
+                                <div class="close">
+                                    <ion-icon name="close-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="form__main">
+                                <div class="user">
+                                    <div class="user-label">Tên tài khoản</div>
+                                    <input type="text" class="user-input" id="user-input" placeholder="Tài khoản" onblur="checkUser()">
+                                    <span class="user-error" id="user-error"></span>
+                                </div>
+
+                                <div class="pwd">
+                                    <div class="pwd-label">Mật khẩu</div>
+                                    <input type="password" class="pwd-input" id="pwd-input" placeholder="Mật khẩu" onblur="checkPwd()">
+                                    <span class="pwd-error" id="pwd-error"></span>
+                                </div>
+                           </div>
+                
+                            <div class="form__footer">
+                                <div class="switch-signup-form">Chưa có tài khoản?</div>
+                                <div class="footer__btn">
+                                    <button class="btn-cancel">Hủy</button>
+                                    <button class="btn-ok">Đăng nhập</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </ul>
+
+                <!-- phần tìm kiếm -->
+                <div class="search-box">
+                    <input class="search-box__input" type="text" placeholder="Tìm kiếm">
+                    <a href="" class="search-btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+       <!-- <img src="../picture/background1.jpg" alt="" class="banner"-->
+       <img src="./picture/background1.jpg" alt="" class="banner">
+       <h1 id="intro">GIỚI THIỆU WEBSITE BÁN ĐIỆN THOẠI</h1>
+       <p id="information">
+           Là công ty hoạt động trong lĩnh vực bán lẻ và sửa chữa các sản phẩm công nghệ và lĩnh vực truyền thông giải trí bao gồm 3 công ty thành viên DienThoaiGiare - Điện thoại vui - Smedia và chuỗi trung tâm bảo hành Apple AASP với quy mô hơn 2.000 nhân viên:
+           <br><br>
+           DienThoaiGiare
+Sau hơn 10 năm vận hành và phát triển không ngừng, hệ thống bán lẻ DienThoaiGiare liên tục mở rộng với chuỗi hơn 100 cửa hàng trên toàn quốc và tự hào là 1 trong 5 hệ thống lớn nhất tại Việt Nam trong lĩnh vực công nghệ.
+           Đó là lý do chúng tôi lập nên <b>Website DienThoaiGiare</b>.
+           <br><br>
+           Tại <b>"DienThoaiGiare"</b>, khách hàng có thể lựa chọn bất kỳ loại điện thoại nào theo ý muốn của mình.
+           Tại đây có tất cả điện thoại của những hãng điện thoại nổi tiếng, từ những kiểu điện thoại cũ tới những kiểu điện thoại mới;
+           từ những điện thoại giá rẻ tới những loại điện thoại mắc tiền, chúng tôi đều có hết.
+           Hãy ghé ngay <b>Website DienThoaiGiare</b> của chúng tôi để có thể lựa chọn bất kỳ loại điện thoại nào mà các bạn muốn.
+           <br><br>
+           Thành viên thực hiện: 
+           <br>
+           <b>
+               20002955_Nguyễn Đình Đức <br>
+               18063011_Phạm Hoàng Long
+           </b>
+           <br><b>----------------------------------------------------------------</b>
+           <br><b>Ý tưởng : Tham khảo một số tài liệu trên mạng, tham khảo bạn bè và các web bán nick game</b>
+       </p>
+       <br><br>
+       <br><br>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Thông Tin Liên Hệ</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                
+                            <p>Địa chỉ: Số 12 Nguyễn Văn Bảo, Phường 4,
+                                Quận Gò Vấp, Thành phố Hồ Chí Minh</p>
+                        </li>
+                        <li class="footer-item"> 
+                            <p>
+                            Điện thoại:
+                            <a href="" class="footer-item__link">070.251.7993</a> 
+                            </p>
+                        </li>
+                        <li class="footer-item">
+                            <p>
+                            Email:<a href="" class="footer-item__link">DienThoaiGiare@gmail.com</a>
+                            </p>  
+                        
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Giới thiệu</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Giới thiệu về DienThoaiGiare</a>
+                        </li>
+                        <li class="footer-item">  
+                            <a href="" class="footer-item__link">Tuyển dụng</a> 
+                        </li>
+                        <li class="footer-item">  
+                            <a href="" class="footer-item__link">Điều khoản</a>
+                        
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Theo Dõi Chung Tôi Trên</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-facebook"></i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="footer-item">  
+                            <a href="" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-instagram"></i>
+                                Instagram
+                            </a> 
+                        </li>
+                        <li class="footer-item">  
+                            <a href="" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-linkedin"></i>
+                                Telegram
+                            </a>
+                        
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Hỗ Trợ Khách Hàng</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Trung Tâm Trợ Giúp</a>
+                        </li>
+                        <li class="footer-item">  
+                            <a href="" class="footer-item__link">Hướng Dẫn Trả Góp</a> 
+                        </li>
+                        <li class="footer-item">  
+                            <a href="" class="footer-item__link">Chính Sách Bảo Hành</a>
+                        
+                        </li>
+                        <div class="footer__logo">
+                            <img src="../picture/logo.jpg" alt="#" class="logo_BoCT">
+                           
+                    </ul>
+                </div>
+               
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="grid">
+                    <p class="footer__text">© 2022 - Bản quyền thuộc về Công ty DienThoaiGiare</p>
+                </div>
+
+            </div>
+        
+    </footer>
+</body>
+</html>
