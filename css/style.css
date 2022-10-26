@@ -1124,6 +1124,13 @@ ul.motor_list li {
     text-align: center;
     align-items: center;
 }
+.cart-content-right-button a {
+    color:white;
+}
+.cart-content-right-button a:hover {
+    cursor: pointer;
+    color:#333;
+}
 .cart-content-right-button button {
     padding : 0 18px;
     height : 35px;
@@ -1168,3 +1175,69 @@ ul.motor_list li {
     font-size: 12px;
     color: #333;
 }
+/*Trang đăng ký*/
+
+.lbl {
+    float:left;
+
+}
+.inp {
+    float:left;
+    padding-left: 10px;
+}
+.frm10 {
+    width:500px; margin:auto;
+    padding:10px 40px; background:whitesmoke;
+}
+.frm10 .txt{
+    width: 400px; padding:6px;
+    border: solid 1px black;
+}
+    border-radius: 11px black;
+fieldset {
+    border: solid 1px lightslategray; margin-top:0;
+    width: 600px;
+    margin-left:350px;
+}
+.frm10 #dk {
+    text-transform: uppercase;
+    font-size: 20px;
+    width:200px; height:40px; border:none;
+    background-color:black; color: white;
+}
+.frm10 #dk:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #212121;
+}
+.frm10 #baoloi{
+    margin: 0px auto; color:red;
+}
+.form10 .loi {
+    width:500px;
+    padding:6px;
+    border:1px solid red;
+
+}
+.thanhvien {
+    width:100%;
+    display: inline-flex;
+}
+.thanhvien1 img {
+    width: 200px ;
+    margin-left:200px;
+}
+.thanhvien2 img {
+    width: 200px ;
+    margin-left:490px;
+}
+.thanhvien1 .p1 {
+    margin-left: 110px;
+    text-align: center;
+}
+.thanhvien2 .p2 {
+    margin-left:391px;
+    text-align: center;
+}
+
+
