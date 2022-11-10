@@ -52,8 +52,8 @@ function checkUser() {
         userError.innerHTML = "*Không được để trống tài khoản";
         return false;
     }
-    if (!userInput.trim().match(/^[a-zA-z0-9]{3,}$/)) {
-        userError.innerHTML = "*Tên tài khoản chứa ít nhất 12 ký tự, gồm chữ hoa, chữ thường và số";
+    if (!userInput.trim().match(/^[a-zA-z0-9]{6,}$/)) {
+        userError.innerHTML = "*Tên tài khoản chứa ít nhất 6 ký tự,bao gồm chữ hoa, thường và số";
         return false;
     }
     userError.innerHTML = "";
@@ -89,11 +89,43 @@ function checkRepwd() {
     repwdError.innerHTML = "";
     return true;
 }
-
+//Kiểm tra định dang email
+function checkEmail() {
+    var emailInput = document.getElementById('email-input').value;
+    var emailError = document.getElementById('email-error');
+    if (emailInput.trim() == "") {
+        emailError.innerHTML = "*Bạn nên nhập email của bạn vào để nhận được sự hỗ trợ từ chúng tôi";
+        return false;
+    }
+    if (!emailInput.trim().match(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z@#\$\/\+\=\(\)\<\>\?-_%\^&\*\.]{255,}$/)) {
+        emailError.innerHTML = "*Email phải theo định dạng XXXXXXX@email.com";
+        return false;
+    }
+    emailError.innerHTML = "";
+    return true;
+}
 // kiểm tra tất cả định dạng nhập vào form đăng ký
 function validInfo() {
-    if (checkUser() && checkPwd() && checkRepwd()) {
+    if (checkUser() && checkPwd() && checkRepwd() && checkEmail()) {
         return true;
     }
     return false;
 }
+
+/*kiểm tra form ĐN*/
+function kt() {
+    var loi = "";
+    //kiểm tra tên đăng nhập
+    var tdn = document.getElementById('tdn');
+
+    if(tdn.value="") {
+    tdn.className="loi";
+    loi += "Tên đăng nhập không được để trống"; 
+        }
+    else if(tdn.value.length!=8){
+    tdn.className = "loi";
+    loi += "Tên đăng nhập tối thiểu có 8 ký tự"
+        }
+    else tdn.className="txt";
+}
+
