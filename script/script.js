@@ -53,7 +53,7 @@ function checkUser() {
         return false;
     }
     if (!userInput.trim().match(/^[a-zA-z0-9]{6,}$/)) {
-        userError.innerHTML = "*Tên tài khoản chứa ít nhất 6 ký tự,bao gồm chữ hoa, thường và số";
+        userError.innerHTML = "*Tên tài khoản chứa ít nhất 6 ký tự";
         return false;
     }
     userError.innerHTML = "";
