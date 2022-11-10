@@ -97,8 +97,8 @@ function checkEmail() {
         emailError.innerHTML = "*Bạn nên nhập email của bạn vào để nhận được sự hỗ trợ từ chúng tôi";
         return false;
     }
-    if (!emailInput.trim().match(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z@#\$\/\+\=\(\)\<\>\?-_%\^&\*\.]{255,}$/)) {
-        emailError.innerHTML = "*Email phải theo định dạng XXXXXXX@email.com";
+    if (!emailInput.trim().match( /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i)) {
+        emailError.innerHTML = "*Email phải theo định dạng Example@email.com";
         return false;
     }
     emailError.innerHTML = "";
